@@ -5,3 +5,289 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+$volvo-font: "Volvo Novum",
+    sans-serif;
+$arial-font: arial,
+    sans-serif;
+@mixin transition($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
+
+body {
+    font-family: $volvo-font;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+    color: #252525;
+    position: relative;
+    height: 100%;
+    background: #fff;
+    -webkit-tap-highlight-color: transparent;
+    overflow: visible !important;
+}
+
+div, section, footer, .btn {
+    box-sizing: border-box;
+}
+
+a {
+    @include transition(all .1s linear);
+    font-family: $volvo-font;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus, input:focus {
+    outline: none;
+}
+
+p {
+    color: #252525;
+    font-family: $volvo-font;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    margin: 0 0 10px 0;
+}
+
+input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 58px;
+    padding: 0 8px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 0 rgba(26, 29, 33, 0.3);
+    color: #252525;
+    font-family: "Roboto";
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-bottom: 20px;
+}
+
+input:hover, input:focus {}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    padding: 0 0 0 0;
+}
+
+ul li:before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.title {
+    color: #fff;
+    font-family: "Roboto";
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 53px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.desc {
+    color: #252525;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-bottom: 15px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wrapper {}
+
+.container {
+    position: relative;
+    max-width: 1730px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.container-menu {
+    position: relative;
+    max-width: 1496px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+/*
+      B U T T O N S
+*/
+
+.btn {}
+
+
+/*
+      H E A D E R
+*/
+
+.header {
+    padding: 14px 0 0 0;
+}
+
+.header-top-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 14px 0;
+}
+
+.diler-title {
+    font-family: $arial-font;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #050505;
+}
+
+.address-phone span {
+    display: inline-block;
+    margin: 0 51px 0 0;
+    font-family: $arial-font;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #050505;
+}
+
+.address-phone a {
+    font-family: $arial-font;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #6b6b6b;
+}
+
+.header .logo {
+    margin: 0 0 0 345px;
+}
+
+nav {
+    background: #000000;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    li {}
+    a {
+        display: block;
+        position: relative;
+        padding: 30px 0 23px 0;
+        font-family: $volvo-font;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+        border-bottom: 5px solid transparent;
+    }
+    a.dropdown-menu:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 52%;
+        right: -18px;
+        width: 11px;
+        height: 6px;
+        background: url(../img/svg/arr-menu.svg) no-repeat center;
+    }
+    a.active {
+        border-color: #fff;
+    }
+    a:hover {
+        border-color: #fff;
+    }
+}
+
+.slider-top__item {
+    min-height: 837px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider-top__content {
+    max-width: 405px;
+}
+
+.slider-top__content-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.slider-top__item {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+/*
+      S E R V I C E S
+*/
+
+
+/*
+      F O O T E R
+*/
+
+
+/*
+      P O P U P
+*/
